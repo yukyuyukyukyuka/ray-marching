@@ -174,7 +174,7 @@ int main(int argc, char** argv) {
             ImGui::Text("Playback time: %.3f s", playback_time);
             if(ImGui::Button("Start/Stop")) { switch_flag(&can_animate); }
             if(ImGui::Button("Reset")) { reset_timer(); }
-            if(ImGui::ListBox("Fragment shader", &selected_shader, fragment_shader_getter, fragment_shaders.data(), fragment_shaders.size(), 4)) { 
+            if(ImGui::ListBox("Fragment shader", &selected_shader, fragment_shader_getter, fragment_shaders.data(), fragment_shaders.size(), 10)) { 
                 fragment_shader = std::string("./shader/fragment/") + fragment_shaders[selected_shader] + std::string(".glsl");
                 shader.load(vertex_shader.c_str(), fragment_shader.c_str());
                 reset_timer();

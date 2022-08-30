@@ -38,3 +38,6 @@ imgui*
 GL
 GLFW
 glm
+
+# bin
+ray-marching
