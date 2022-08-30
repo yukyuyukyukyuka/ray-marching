@@ -2,9 +2,9 @@
 
 out vec4 FragColor;
 
-uniform ivec2  resolution;
-uniform dvec2  mouse_pos;
-uniform double playback_time;
+uniform ivec2 resolution;
+uniform vec2  mouse_pos;
+uniform float playback_time;
 
 void main() {
     // normalize coordinates
