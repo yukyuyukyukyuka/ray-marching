@@ -26,7 +26,7 @@ bool display_gui = true;
 
 // uniform variables
 glm::ivec2 resolution;
-glm::vec2 mouse_pos;
+glm::dvec2 mouse_pos;
 float playback_time;
 
 // callback functions
@@ -153,7 +153,7 @@ int main(int argc, char** argv) {
 
         // set uniform variables
         shader.set_ivec2("resolution", resolution);
-        shader.set_vec2("mouse_pos", mouse_pos);
+        shader.set_vec2("mouse_pos", (glm::vec2)mouse_pos);
         shader.set_float("playback_time", playback_time);
 
         // render
